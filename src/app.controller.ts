@@ -1,6 +1,5 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { AppService } from './app.service';
-import * as pm2 from 'pm2';
 
 //pm2 processes must be started from user ionut!!!
 
