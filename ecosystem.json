@@ -1,0 +1,8 @@
+{
+    "apps": [{
+        "name": "crawler-monitoring",
+        "script": "./main.js",
+        "autorestart": true,
+        "instances":1
+    }]
+}
