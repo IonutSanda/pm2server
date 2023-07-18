@@ -1,6 +1,6 @@
 {
     "apps": [{
-        "name": "crawler-monitoring",
+        "name": "pm2-monitoring",
         "script": "./main.js",
         "autorestart": true,
         "instances":1
