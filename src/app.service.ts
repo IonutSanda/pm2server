@@ -17,7 +17,7 @@ export class AppService {
   }
 
   //id can either be the id of the process or the name of the process
-  restartPm2Service(idOrName: number | string) {
+  restartPm2Service(idOrName: number | string): Promise<{success:string}> {
     return new Promise((resolve, reject) => {
       pm2.restart(idOrName, (err) => {
         if (err) {
@@ -29,7 +29,7 @@ export class AppService {
     })
   }
 
-  startPm2Service(idOrName: string) {
+  startPm2Service(idOrName: string): Promise<{success}> {
     return new Promise((resolve, reject) => {
       pm2.start(idOrName, (err) => {
         if (err) {
@@ -41,7 +41,7 @@ export class AppService {
     })
   }
 
-  stopPm2Service(idOrName: string) {
+  stopPm2Service(idOrName: string):Promise<{success: string}> {
     return new Promise((resolve, reject) => {
       pm2.stop(idOrName, (err) => {
         if (err) {
